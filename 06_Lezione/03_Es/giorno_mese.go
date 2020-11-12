@@ -1,6 +1,5 @@
-// Vogliamo scrivere una funzione 
-// 	giorniInMese(mese int) int
-// che, dato come parametro il numero corrispondente a un mese, restituisce il numero di giorni di quel mese (28 per febbraio).
+// Vogliamo scrivere una funzione giorniInMese(mese int) int che, dato come parametro il numero corrispondente a un mese, 
+// restituisce il numero di giorni di quel mese (28 per febbraio).
 
 package main
 
@@ -13,7 +12,7 @@ func giorniMese(mese int) int {
 	case 2:
 		return 28
 	default:
-	return 31
+		return 31
 	}
 }
 
