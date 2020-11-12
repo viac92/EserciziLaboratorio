@@ -19,7 +19,7 @@ import "fmt"
 
 func punti(s string) int {
 	var punti int
-	for _, char := range s {
+	loop: for _, char := range s {
 
 		switch char {
 		case 'A':
@@ -32,6 +32,11 @@ func punti(s string) int {
 			punti += 3
 		case 'J': 
 			punti += 2
+		case '7', '6', '5', '4':
+			punti += 0
+		default:
+			punti = -1
+			break loop
 		}
 	}
 	return punti
