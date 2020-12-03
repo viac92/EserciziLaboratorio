@@ -35,4 +35,3 @@ func main() {
 	fmt.Println(parola[:len(parola)-3])
 
 }
-
