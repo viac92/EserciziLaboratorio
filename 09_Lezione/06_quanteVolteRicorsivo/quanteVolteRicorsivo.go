@@ -6,23 +6,24 @@ import (
 	"fmt"
 )
 
-func trovaRuna(sliR []rune, r rune) int {
+func trovaRuna(s []rune, c rune) int {
 	var count int
-	if sliR[0] == r {
+	if len(s) == 1 && s[0] == c {
+		return count + 1
+	}
+	if len(s) == 1 && s[0] != c {
+		return count
+	}
+	
+	if s[0] == c {
 		count++
 	}
-	if len(sliR) == 0 {
-		return count
-	}
-	if len(sliR) == 1 {
-		return count
-	}	
-	fmt.Println(sliR[:1])
-	return count + trovaRuna(sliR[:1], r)
+
+	return count + trovaRuna(s[1:], c)
 }
 
 func main() {
-	lista := []rune{'a','b','c','c'}
-
-	fmt.Println(trovaRuna(lista, 'c'))
+	lista := []rune{'c', 'a', 'c','x', 'c', 'c'}
+	fmt.Println(lista)
+	fmt.Println(trovaRuna(lista, 'x'))
 }
