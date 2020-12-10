@@ -5,11 +5,11 @@ import (
 	"fmt"
 )
 
-func f(n []int) int {
+func sommaRicorsiva(n []int) int {
 	if len(n) == 1 {
 		return n[0]
 	}
-	return n[0] + f(n[1:]) 
+	return n[0] + sommaRicorsiva(n[1:]) 
 }
 
 
@@ -17,6 +17,5 @@ func main() {
 	//lista := []int{1}
 	//lista := []int{1, 2}
 	lista := []int{4, 5 , 6, 5, 10, 20}
-	fmt.Println(f(lista))
+	fmt.Println(sommaRicorsiva(lista))
 }
-
