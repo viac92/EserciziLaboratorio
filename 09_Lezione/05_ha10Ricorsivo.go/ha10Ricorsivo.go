@@ -8,9 +8,6 @@ import (
 )
 
 func trovaDieci(n []int) bool {
-	if len(n) == 0 {
-		return false
-	}
 	if n[0] == 10 {
 		return true
 	}
@@ -21,6 +18,6 @@ func trovaDieci(n []int) bool {
 }
 
 func main() {
-	lista := []int{4, 5, 6, 5, 20}
+	lista := []int{1, 2, 3, 9, 20, 40, 10}
 	fmt.Println(trovaDieci(lista))
 }
