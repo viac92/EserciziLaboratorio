@@ -12,13 +12,8 @@ import  (
 	"bufio"
 	"fmt"
 	"os"
+	"reflect"
 )
-
-func swap(s []string) []string0 {
-	if len(s) == 1 {
-		return s[0]
-	}
-}
 
 func main() {
 	b := bufio.NewScanner(os.Stdin)
@@ -30,4 +25,12 @@ func main() {
 		t := b.Text()
 		wordsSlice = append(wordsSlice, t)
 	}
+
+	swapSlice := reflect.Swapper(wordsSlice)
+	
+	for i := 0; i < len(wordsSlice)/2; i++ {
+		swapSlice(i, len(wordsSlice)-1-i)
+	}
+
+	fmt.Println(wordsSlice)
 }
